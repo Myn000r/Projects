@@ -1,0 +1,39 @@
+   <!doctype html>
+   <html lang="en">
+   <head>
+   <meta charset="utf-8">
+   <meta name="Homework#4Level1" content="Mynor Valdez">
+   <title>Dog Photos</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="dog/dog.js"></script>
+   <style>
+     body{
+	   background:Yellow;
+     }
+
+
+     h1{
+	   text-align: center;
+     }
+
+     .image {
+       display:none; 
+       width: 200px;
+     }
+   </style>
+   </head>
+   <body>
+   <h1>Dog Photo</h1>
+   <div class="image">
+   <img src="dogmages/0.jpg" alt="click to display" class="img-1"/>
+   </div>
+   <button type="button" class="button">Display</button> 
+   <script>
+     $(document).ready(function(){
+	 $('.button').click(function(){
+     	$('.image').show();
+	 });
+	 });
+   </script> 
+   </body>
+   </html>     

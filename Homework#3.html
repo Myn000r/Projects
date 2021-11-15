@@ -1,0 +1,59 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="Homework#3" content="Mynor Valdez">
+<title>Homework#3</title>
+</head>
+<body>
+<h1> Celsius to Fahrenheit and Fahrenheit to Celsius</h1>
+ <form>
+   <fieldset>
+		<label>
+		Enter temperature:
+		</label>
+<input type="text" id="value"/>
+  </fieldset>
+  <fieldset>
+    <button type="button" id="Cbutton">convert Celsius to Fahrenheit</button>
+    <button type="button" id="Fbutton">convert Fahrenheit to Celsius</button>
+  </fieldset>
+  <fieldset>
+    <p> Temperature in Celsius to Fahrenheit is: </p>
+      <p id="cvalue"></p>
+    <p> Temperature in  Fahrenheit to Celsius is: </p>
+      <p id="fvalue"></p>
+  </fieldset>
+ </form>
+<script> 
+function Temperature(){
+   let answer = document.getElementById("value").value;
+    let C = parseFloat(answer);
+     if (isNaN(C)) {
+      alert("Enter an Intenger!");
+ document.getElementById("cvalue").innerHTML = "";
+}else{ 
+   let F = (C*9/5+32);
+    let input= C + " degrees C is " + F + " degrees F";
+document.getElementById("cvalue").innerHTML = input;
+ }
+ }
+ document.getElementById("Cbutton").addEventListener("click",Temperature);
+ 
+function T(){
+   let answer = document.getElementById("value").value;
+    let F = parseFloat(answer);
+     if (isNaN(F)) {
+      alert("Enter an Intenger!");
+ document.getElementById("fvalue").innerHTML = "";
+}else{ 
+   let C = (F -32)*5/9;
+    let input = F + " degrees F is " + C + " degrees C";
+document.getElementById("fvalue").innerHTML = input;
+ }
+ }
+document.getElementById("Fbutton").addEventListener("click",T);
+
+</script>
+</body>
+</html>
