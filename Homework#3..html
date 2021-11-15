@@ -1,0 +1,103 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="utf-8">
+   <meta name="Homework#3" content="Mynor Valdez">
+    <title>Homework#3</title>
+   </head>
+   <body>
+     <h1> Subscription</h1>
+   <form id="form">
+   <fieldset>
+     <label><b>name</b></label>
+   <input type="text" name="Name"  id="name" required>
+    </fieldset>
+    <fieldset>
+	<label>Street Address</label>
+    <textarea name="Street Address"  id="Address" required></textarea>
+	</fieldset>
+	<fieldset>
+	<label><b>City</b></label>
+    <select name="city" id="City" required>
+	    <option  value="">City</option>
+	    <option  value="Illinois">Illinois</option>
+        <option  value="Des Moines">Des Moines</option>
+	    <option  value="California">California</option>
+    	<option  value="New York">New York</option>
+   </select>
+   </fieldset>
+   <fieldset>
+   <label><b>State</b></label>
+   <select name="state" id="State" required>
+	    <option  value="">State</option>
+	    <option  value="chicago">Chicago</option>
+		<option  value="Iowa">Iowa</option>
+		<option  value="Los Angeles">Los Angeles</option>
+       	<option  value="New York">New York</option>
+   </select>
+   </fieldset>
+   <fieldset>
+    <label><b>Zip Code</b></label>
+   <input name="Zip_Code"  id="Zip_Code" required>
+   </fieldset>
+   <fieldset>
+    <label><b>Email</b></label>
+   <input type="email" placeholder="Enter Email" name="email" id="Email" required>
+   </fieldset>
+   <button type="button" id="button">Submit Subscription"</button>
+   <br><br>
+   <h3> Application Subcription</h3>
+   <br>
+    <p id="app"></p>
+    <p id="app1"></p>
+    <p id="app2"></p>
+    <p id="app3"></p>
+    <p id="app4"></p>
+    <p id="app5"></p>
+   </form>
+   <script>
+   function application() {
+     let value=document.getElementById("name").value;
+     let a=(value);
+   document.getElementById("app").innerHTML=a;
+   }
+   document.getElementById("button").addEventListener("click",application);
+
+   function application1() {
+     let value=document.getElementById("Address").value;
+     let a=(value);
+    document.getElementById("app1").innerHTML=a;
+    }
+    document.getElementById("button").addEventListener("click",application1);
+
+   function application2() {
+     let value=document.getElementById("City").value;
+     let a=(value);
+   document.getElementById("app2").innerHTML=a;
+   }
+   document.getElementById("button").addEventListener("click",application2);
+
+   function application3() {
+     let value=document.getElementById("State").value;
+     let a=(value);
+   document.getElementById("app3").innerHTML=a;
+   }
+   document.getElementById("button").addEventListener("click",application3);
+
+   function application4() {
+     let value=document.getElementById("Zip_Code").value;
+     let a=(value);
+   document.getElementById("app4").innerHTML=a;
+   }
+   document.getElementById("button").addEventListener("click",application4);
+
+   function application5() {
+     let value=document.getElementById("Email").value;
+     let a=(value);
+   document.getElementById("app5").innerHTML=a;
+   }
+   document.getElementById("button").addEventListener("click",application5);
+   </script>
+   </body>
+   </html>
+
